@@ -1,13 +1,8 @@
 # Creating A Token
 
 Creating a token using solidity
-
-
-### Executing program
-
-* How to run the program
   
-* Step-by-step bullets
+
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
