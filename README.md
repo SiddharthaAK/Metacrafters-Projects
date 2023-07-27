@@ -1,62 +1,48 @@
-# MyToken Solidity Contract
+# Creating a Token
 
-This repository contains a simple token contract named "MyToken" written in Solidity. The contract demonstrates basic functionalities for creating and managing a custom token on the Ethereum blockchain. If you're interested in developing your own ERC-20 compatible tokens on Ethereum, this contract can serve as a starting point.
+This is a program written in sollidity to create a token. It allows the user to mint(create) and burn(delete) tokens
 
 ## Description
 
-The "MyToken" contract is written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. This contract represents a basic ERC-20 token with the following features:
+This program is contract is written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. This contract represents a token with the following features:
 
 - Token Name: "CANDY"
-- Token Symbol/Abbreviation: "CND"
-- Total Supply: 500
+- Token Abbreviation: "CND"
 
 The contract includes a `mapping` variable named `balances`, which keeps track of the token balance of each address.
 
 The contract also includes two functions:
 
-1. **Mint Function**
-   - Function Signature: `function mint(address _adr, uint _data) public`
-   - Purpose: Allows the contract owner to mint (create) new tokens and assign them to a specified address.
-   - Parameters:
-     - `_adr`: The address to which the minted tokens will be assigned.
-     - `_data`: The amount of tokens to be minted and added to the address's balance.
-   - Behavior: Increases the total token supply and updates the balance of the specified address.
+1. Mint Function
+   - This function is used to mint (create) new tokens and assign them to the specified       address. It takes the address(to which the minted tokens will be assigned) and amount of tokens(to be added to the address) as parameters.
+   - It ncreases the total token supply and updates the balance of the specified address.
 
-2. **Burn Function**
-   - Function Signature: `function burn(address _adr, uint _data) public`
-   - Purpose: Allows the contract owner to burn (remove) tokens from a specified address.
-   - Parameters:
-     - `_adr`: The address from which the tokens will be burned.
-     - `_data`: The amount of tokens to be burned.
-   - Behavior: Decreases the total token supply and updates the balance of the specified address if the address has sufficient tokens to burn.
+2. Burn Function
+   - This function is used to burn(remove) tokens from a specified address. It takes the address(from which the tokens will be removed) and amount of tokens(to be removed to the address) as parameters.
+   - It decreases the total token supply and updates the balance of the specified address if the address has sufficient tokens to burn.
 
 ## Getting Started
 
-### Prerequisites
+An online Solidity IDE like [Remix](https://remix.ethereum.org/) can be used to run this program.
 
-To interact with the "MyToken" contract, you need the following:
-
-- [Remix](https://remix.ethereum.org/): An online Solidity IDE for compiling and deploying smart contracts.
 
 ### Deployment and Interaction
 
 1. Open [Remix](https://remix.ethereum.org/) in your web browser.
 
-2. Create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol).
+2. Create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., token.sol).
 
 3. Copy and paste the provided "MyToken" contract code into the file.
 
-4. To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile MyToken.sol" button.
+4. To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.20" (or another compatible version), and then click on the "Compile token.sol" button.
 
-5. Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyToken" contract from the dropdown menu, and then click on the "Deploy" button.
+5. Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "token" contract from the dropdown menu, and then click on the "Deploy" button.
 
-6. Once the contract is deployed, you can interact with it by calling the `mint` and `burn` functions. Click on the "MyToken" contract in the left-hand sidebar, and then click on the desired function. Enter the required parameters (address and data), and then click on the "transact" button to execute the function and update the token balances.
-
-Please note that in a real-world scenario, you would need to deploy this contract on the Ethereum mainnet or a testnet to interact with it using real addresses and Ethereum gas.
+6. Once the contract is deployed, you can interact with it by calling the `mint` and `burn` functions. Click on the "token" contract in the left-hand sidebar, and then click on the desired function. Enter the required parameters (address and data), and then click on the "transact" button to execute the function and update the token balances.
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity 0.8.20;
 
 /*
        REQUIREMENTS
@@ -72,7 +58,7 @@ pragma solidity 0.8.18;
        to the amount that is supposed to be burned.
 */
 
-contract MyToken {
+contract token {
 
     // public variables here
     string public TokenName = "CANDY";
@@ -102,8 +88,11 @@ contract MyToken {
 ## Authors
 
 Siddhartha A K
+@siddhark1303@gmail.com
+
+Siddhartha A K
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License
 
