@@ -69,16 +69,16 @@ contract token {
     mapping(address=>uint) public balances;
     
     // mint function
-    function mint(address _adr, uint _data) public{
-        TotalSupply +=_data;
-        balances[_adr] += _data;
+    function mint(address _adr, uint _num) public{
+        TotalSupply +=_num;
+        balances[_adr] += _num;
     }
 
     // burn function
-        function burn(address _adr, uint _data) public{
+        function burn(address _adr, uint _num) public{
             if(balances[_adr]>=_data){
-        TotalSupply -=_data;
-        balances[_adr] -= _data;
+        TotalSupply -=_num;
+        balances[_adr] -= _num;
             }
     }
 }
